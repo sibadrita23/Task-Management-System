@@ -1,0 +1,20 @@
+class TaskManager:
+    # ... (previous code remains the same)
+
+    def update_task_status(self, task_index, new_status):
+        if 1 <= task_index <= len(self.tasks):
+            task = self.tasks[task_index - 1]
+            task.status = new_status
+            print(f"Task '{task.title}' status updated to '{new_status}'.")
+        else:
+            print("Invalid task index.")
+
+if __name__ == "__main__":
+    # ... (previous code remains the same)
+    
+    # Update task status
+    manager.update_task_status(1, "In Progress")
+    
+    # List updated tasks
+    print("\nUpdated Tasks:")
+    manager.list_tasks()
