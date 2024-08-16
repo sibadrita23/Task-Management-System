@@ -1,0 +1,19 @@
+class TaskManager:
+    # ... (previous code remains the same)
+
+    def remove_task(self, task_index):
+        if 1 <= task_index <= len(self.tasks):
+            removed_task = self.tasks.pop(task_index - 1)
+            print(f"Task '{removed_task.title}' removed successfully.")
+        else:
+            print("Invalid task index.")
+
+if __name__ == "__main__":
+    # ... (previous code remains the same)
+    
+    # Remove a task
+    manager.remove_task(2)
+    
+    # List final tasks
+    print("\nFinal Tasks:")
+    manager.list_tasks()
